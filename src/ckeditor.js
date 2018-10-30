@@ -32,6 +32,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
+
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 // Plugins to include in the build.
@@ -60,7 +62,8 @@ DecoupledEditor.builtinPlugins = [
 	MediaEmbed,
 	Paragraph,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Autosave
 ];
 
 // Editor configuration.
@@ -115,5 +118,5 @@ DecoupledEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'de'
 };
