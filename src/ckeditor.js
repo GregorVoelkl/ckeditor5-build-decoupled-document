@@ -59,7 +59,6 @@ DecoupledEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
-	MediaEmbed,
 	Paragraph,
 	Table,
 	TableToolbar,
@@ -90,7 +89,6 @@ DecoupledEditor.defaultConfig = {
 			'blockquote',
 			'imageUpload',
 			'insertTable',
-			'mediaEmbed',
 			'|',
 			'undo',
 			'redo'
