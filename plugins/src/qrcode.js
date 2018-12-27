@@ -11,7 +11,7 @@ export default class Qrcode extends Plugin {
 
             view.set( {
                 label: 'Insert QrCode',
-                icon: imageIconS,
+                icon: imageIconButton,
                 tooltip: true
             } );
 
@@ -19,7 +19,7 @@ export default class Qrcode extends Plugin {
             view.on( 'execute', () => {
                 editor.model.change( writer => {
                     const imageElement = writer.createElement( 'image', {
-                        src: imageIconS
+                        src: 'http://placehold-it?100x100'
                     } );
 
                     // // Insert the image in the current selection location.
