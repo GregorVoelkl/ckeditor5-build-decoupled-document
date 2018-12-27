@@ -35,8 +35,13 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
+import Qrcode from '../plugins/src/qrcode';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
+
+
+
+
 
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
@@ -66,13 +71,15 @@ DecoupledEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Autosave
+	Autosave,
+    Qrcode
 ];
 
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'qrCode',
 			'heading',
 			'|',
 			'fontsize',

@@ -62,6 +62,7 @@ module.exports = {
 				test: /\.svg$/,
 				use: [ 'raw-loader' ]
 			},
+
 			{
 				test: /\.css$/,
 				use: [
