@@ -22,7 +22,7 @@
   ],
   "main": "./build/ckeditor.js",
   "files": [
-    "build"
+    "build", "assets"
   ],
   "devDependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^10.0.4",
