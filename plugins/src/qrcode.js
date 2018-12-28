@@ -6,6 +6,8 @@ export default class Qrcode extends Plugin {
     init() {
         const editor = this.editor;
 
+        const config = editor.config.get('qrCode')
+
         editor.ui.componentFactory.add( 'qrCode', locale => {
             const view = new ButtonView( locale );
 
@@ -19,7 +21,7 @@ export default class Qrcode extends Plugin {
             view.on( 'execute', () => {
                 editor.model.change( writer => {
                     const imageElement = writer.createElement( 'image', {
-                        src: 'http://place-hold.it/100x100'
+                        src: config.previewQrCodes[1]
                     } );
 
                     // // Insert the image in the current selection location.

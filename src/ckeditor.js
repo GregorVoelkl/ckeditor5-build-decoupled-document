@@ -126,6 +126,16 @@ DecoupledEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+	qrCode: {
+		sizes: [
+			100, 150, 200
+		],
+		previewQrCodes: [
+			'http://place-hold.it/100x100',
+			'http://place-hold.it/150x150',
+			'http://place-hold.it/200x200',
+		]
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'de'
 };
