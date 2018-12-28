@@ -60,7 +60,18 @@
 
 		<p>You can use this sample to validate whether your <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">custom build</a> works fine.</p>`;
 
-	DecoupledEditor.create( editorData )
+	DecoupledEditor.create( editorData , {
+		qrCode: {
+			sizes: [
+				100, 150, 200
+			],
+			previewQrCodes: [
+				'http://place-hold.it/10x105',
+				'http://place-hold.it/150x150',
+				'http://place-hold.it/200x200',
+			]
+		},
+	})
 	.then( editor => {
 		window.editor = editor;
 
