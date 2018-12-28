@@ -7,7 +7,7 @@ export default class Qrcode extends Plugin {
         const editor = this.editor;
 
         const config = editor.config.get('qrCode')
-        alert(config.previewQrCodes[0]);
+
         editor.ui.componentFactory.add( 'qrCode', locale => {
             const view = new ButtonView( locale );
 
