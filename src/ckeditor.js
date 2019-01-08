@@ -127,14 +127,16 @@ DecoupledEditor.defaultConfig = {
 		]
 	},
 	qrCode: {
-		sizes: [
-			100, 150, 200
-		],
-		previewQrCodes: [
-			'http://place-hold.it/200x200',
-			'http://place-hold.it/150x150',
-			'http://place-hold.it/200x200',
-		]
+		sizes: {
+			sm: '100x100',
+			md: '150x150',
+			lg: '200x200',
+		},
+		previewQrCodes: {
+			sm: 'http://place-hold.it/100x100',
+			md: 'http://place-hold.it/150x150',
+			lg: 'http://place-hold.it/200x200',
+		}
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'de'
