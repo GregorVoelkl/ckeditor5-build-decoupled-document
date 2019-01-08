@@ -36,6 +36,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 import Qrcode from '../plugins/src/qrcode';
+import Variables from '../plugins/src/variables';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -72,7 +73,8 @@ DecoupledEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Autosave,
-    Qrcode
+    Qrcode,
+	Variables
 ];
 
 // Editor configuration.
@@ -80,6 +82,7 @@ DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'qrCode',
+			'variables',
 			'heading',
 			'|',
 			'fontsize',
@@ -138,6 +141,17 @@ DecoupledEditor.defaultConfig = {
 			lg: 'http://place-hold.it/200x200',
 		}
 	},
+	variables: [
+		{
+			'label' : 'Variable 1',
+			'value' : '[Variable 1]'
+		},
+		{
+			'label' : 'Variable 2',
+			'value' : '[Variable 2]'
+		}
+	],
+
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'de'
 };
