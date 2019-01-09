@@ -37,7 +37,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 import Qrcode from '../plugins/src/qrcode';
 import Variables from '../plugins/src/variables';
-
+import Vardate from '../plugins/src/vardate';
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 
@@ -74,7 +74,8 @@ DecoupledEditor.builtinPlugins = [
 	TableToolbar,
 	Autosave,
     Qrcode,
-	Variables
+	Variables,
+	Vardate,
 ];
 
 // Editor configuration.
@@ -83,6 +84,7 @@ DecoupledEditor.defaultConfig = {
 		items: [
 			'qrCode',
 			'variables',
+			'vardate',
 			'heading',
 			'|',
 			'fontsize',
@@ -149,6 +151,16 @@ DecoupledEditor.defaultConfig = {
 		{
 			'label' : 'Variable 2',
 			'value' : '[Variable 2]'
+		}
+	],
+	vardate: [
+		{
+			'label' : 'Heute',
+			'value' : '[Date.date]'
+		},
+		{
+			'label' : 'Morgen',
+			'value' : '[Date.date+1D]'
 		}
 	],
 
