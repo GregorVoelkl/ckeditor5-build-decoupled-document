@@ -49,7 +49,9 @@ export default class Variables extends Plugin {
 
             this.listenTo( dropdown, 'execute', evt => {
                 editor.model.change( writer => {
-                    editor.model.insertContent( writer.createText(evt.source.variable_value) );
+                    const currentAttributes = editor.model.document.selection.getAttributes();
+
+                    editor.model.insertContent( writer.createText(evt.source.variable_value, currentAttributes) );
                 } );
             })
 
