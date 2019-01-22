@@ -48,8 +48,9 @@ export default class Vardate extends Plugin {
             // dropdown.render();
 
             this.listenTo( dropdown, 'execute', evt => {
+                const currentAttributes = editor.model.document.selection.getAttributes();
                 editor.model.change( writer => {
-                    editor.model.insertContent( writer.createText(evt.source.variable_value) );
+                    editor.model.insertContent( writer.createText(evt.source.variable_value, currentAttributes) );
                 } );
             })
 

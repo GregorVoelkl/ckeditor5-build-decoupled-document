@@ -82,8 +82,12 @@ DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'qrCode',
+			'|',
 			'variables',
+			'|',
 			'vardate',
+			'|',
+			'heading',
 			'|',
 			'fontsize',
 			'fontfamily',
