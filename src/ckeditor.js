@@ -87,8 +87,6 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'vardate',
 			'|',
-			'heading',
-			'|',
 			'fontsize',
 			'fontfamily',
 			'|',
